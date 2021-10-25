@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>3D平面折叠</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 600px;
+      min-height: 150%;
+    }
+
+    body {
+      min-height: 100%;
+      background: linear-gradient(hsl(80, 51%, 8%), #E0D7A3);
+    }
+
+    div {
+      perspective: 1000px;
+      width: 33%;
+      margin: 0 auto;
+      margin-top: 10rem;
+    }
+
+    figure {
+      margin: 0;
+      width: 100%;
+      height: 29.5vw;
+      background: url("./img/8.jpeg");
+      background-size: 100%;
+      transform-origin: center bottom;
+      transform-style: preserve-3d;
+      transition: 1s transform;
+    }
+
+    figure figcaption {
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("66/winter-hat.jpg");
+      background-size: 100%;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      color: #fff;
+      position: relative;
+      top: 29.5vw;
+      transform-origin: center top;
+      transform: rotateX(-89.9deg);
+      font-size: 1.2vw;
+      font-family: Montserrat, Arial, sans-serif;
+      text-align: center;
+      line-height: 3;
+    }
+
+    figure:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.1), inset 0 0 250px 250px rgba(0, 0, 0, 0.1);
+      transition: 1s;
+      transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+      transform-origin: inherit;
+    }
+
+    div:hover figure {
+      transform: rotateX(75deg) translateZ(5vw);
+    }
+
+    div:hover figure:before {
+      box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5), inset 0 0 250px 250px rgba(0, 0, 0, 0.5);
+      transform: rotateX(-5deg) translateZ(-80px) scale(1);
+    }
+
+    @media screen and (max-width: 800px) {
+      div {
+        width: 50%;
+      }
+
+      figure {
+        height: 45vw;
+      }
+
+      figure figcaption {
+        top: 45vw;
+        font-size: 2vw;
+      }
+    }
+
+    @media screen and (max-width: 500px) {
+      div {
+        width: 80%;
+        margin-top: 1rem;
+      }
+
+      figure {
+        height: 70vw;
+      }
+
+      figure figcaption {
+        top: 70vw;
+        font-size: 3vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <div onclick="">
+    <figure>
+      <figcaption>小师妹马尔代夫.手册</figcaption>
+    </figure>
+  </div>
+</body>
+
+</html>

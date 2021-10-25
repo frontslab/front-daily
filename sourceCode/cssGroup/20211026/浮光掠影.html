@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>浮光掠影</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .flash {
+            position: relative;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .flash img {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .flash-bar {
+            position: absolute;
+            left: -400px;
+            width: 20px;
+            height: 100%;
+            background: #fff;
+            opacity: 0.5;
+            transform: skewX(-30deg);
+            transform-origin: 0 100%;
+        }
+
+        .flash:hover .flash-bar {
+            left: 100vw;
+            transition: left ease-in-out 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="flash">
+        <div class="flash-bar"></div>
+        <img src="img/dm.jpg" />
+    </div>
+</body>
+
+</html>
