@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>clip-path之polygon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container>div {
+            width: 12rem;
+            height: 12rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shape {
+            display: inline-block;
+            width: 6rem;
+            height: 6rem;
+            background: currentColor;
+        }
+
+        .Triangle,
+        .Trapezoid,
+        .Parallelogram,
+        .Rhombus,
+        .Pentagon,
+        .Hexagon,
+        .Heptagon,
+        .Octagon,
+        .Nonagon {
+            color: red;
+        }
+
+        .Decagon,
+        .Bevel,
+        .Rabbet,
+        .arrow,
+        .Point,
+        .Chevron {
+            color: yellow;
+        }
+
+        .Star,
+        .Cross,
+        .Message,
+        .Close,
+        .Frame,
+        .Inset,
+        .Polygon,
+        .Circle,
+        .Ellipse,
+        .Cross {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="container">
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);  clip-path: polygon(50% 0%, 0% 100%, 100% 100%)"
+                class="shape Triangle"></div>
+            <div>Triangle</div>
+        </div>
+
+        <div>
+            <div style="-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)"
+                class="shape Trapezoid"></div>
+            <div>Trapezoid</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)"
+                class="shape Parallelogram"></div>
+            <div>Parallelogram</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)"
+                class="shape Rhombus"></div>
+            <div>Rhombus</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)"
+                class="shape Pentagon"></div>
+            <div>Pentagon</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)"
+                class="shape Hexagon"></div>
+            <div>Hexagon</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)"
+                class="shape Heptagon"></div>
+            <div>Heptagon</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)"
+                class="shape Octagon"></div>
+            <div>Octagon</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)"
+                class="shape Nonagon"></div>
+            <div>Nonagon</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)"
+                class="shape Decagon"></div>
+            <div>Decagon</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);  clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)"
+                class="shape Bevel"></div>
+            <div>Bevel</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%)"
+                class="shape Rabbet"></div>
+            <div>Rabbet</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);  clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%)"
+                class="shape Left arrow"></div>
+            <div>Left arrow</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%)"
+                class="shape Right arrow"></div>
+            <div>Right arrow</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);  clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%)"
+                class="shape Left Point"></div>
+            <div>Left Point</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)"
+                class="shape Right Point"></div>
+            <div>Right Point</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%)"
+                class="shape Left Chevron"></div>
+            <div>Left Chevron</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%)"
+                class="shape Right Chevron"></div>
+            <div>Right Chevron</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)"
+                class="shape Star"></div>
+            <div>Star</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%);  clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 65% 100%, 35% 100%, 35% 50%, 10% 50%)"
+                class="shape Cross"></div>
+            <div>Cross</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)"
+                class="shape Message"></div>
+            <div>Message</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%)"
+                class="shape Close"></div>
+            <div>Close</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);  clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%)"
+                class="shape Frame"></div>
+            <div>Frame</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: inset(5% 20% 15% 10%);  clip-path: inset(5% 20% 15% 10%)"
+                class="shape Inset"></div>
+            <div>Inset</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: circle(50% at 50% 50%);  clip-path: circle(50% at 50% 50%)"
+                class="shape Circle"></div>
+            <div>Circle</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: ellipse(25% 40% at 50% 50%);  clip-path: ellipse(25% 40% at 50% 50%)"
+                class="shape Ellipse"></div>
+            <div>Ellipse</div>
+        </div>
+        <div>
+            <div style="-webkit-clip-path: polygon(10% 75%, 10% 25%, 35% 0%, 100% 10%, 90% 30%, 50% 30%, 40% 40%, 40% 60%, 50% 70%, 90% 70%, 100% 90%, 35% 100%);  clip-path: polygon(10% 75%, 10% 25%, 35% 0%, 100% 10%, 90% 30%, 50% 30%, 40% 40%, 40% 60%, 50% 70%, 90% 70%, 100% 90%, 35% 100%)"
+                class="shape Custom Polygon"></div>
+            <div>Custom Polygon</div>
+        </div>
+    </div>
+    <div class="turning"></div>
+    <style>
+        .turning {
+            margin: 5rem auto;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+        }
+
+        .turning:hover {
+            animation: clipDiamondIn 1s;
+            background-color: yellow;
+            clip-path: polygon(100% 0, 50% 100%, 0% 0%);
+        }
+
+        @keyframes clipDiamondIn {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: yellow;
+            }
+        }
+    </style>
+    <script src="" async defer></script>
+</body>
+
+</html>
