@@ -12,7 +12,7 @@
 
 ### 博客
 
-[**点我进入前端实验室博客**]([前端实验室 (gitee.io)](https://frontlab.gitee.io/blog/))
+[**点我进入前端实验室博客**](https://frontlab.gitee.io/blog/)
 
 
 
