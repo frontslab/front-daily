@@ -20,7 +20,7 @@
 
 [🍕 **模板**](https://frontlab.gitee.io/blog/)		[🎈查看源码](https://frontlab.gitee.io/blog/)
 
-[🍕 **5个CSS特效让你的页面活起来**]([5个让页面"活"起来的CSS特效 (qq.com)](https://mp.weixin.qq.com/s?__biz=Mzg4MjY5MTU1MA==&mid=2247484508&idx=1&sn=123d2d87594a55d724677d0a77cb90f4&chksm=cf5398edf82411fb8339a1252b99357b6a7d99136e2f7309278c2f71f0c4593e512bb78bdead&token=1956354520&lang=zh_CN#rd))		[🎈查看源码](https://github.com/frontslab/front-daily/tree/main/sourceCode/20211026)
+[🍕 **5个CSS特效让你的页面活起来**](https://mp.weixin.qq.com/s?__biz=Mzg4MjY5MTU1MA==&mid=2247484508&idx=1&sn=123d2d87594a55d724677d0a77cb90f4&chksm=cf5398edf82411fb8339a1252b99357b6a7d99136e2f7309278c2f71f0c4593e512bb78bdead&token=1956354520&lang=zh_CN#rd)		[🎈查看源码](https://github.com/frontslab/front-daily/tree/main/sourceCode/20211026)
 
 [🍕 **30个CSS碎片--这不仅是皮囊**](https://mp.weixin.qq.com/s?__biz=Mzg4MjY5MTU1MA==&mid=2247484691&idx=1&sn=5149ecf8b555b741f8183f086eeee796&chksm=cf5399a2f82410b43316abcc64900a36c6d504e394a154ee8fde76ad71b9bff50a6ee7a179b4&token=1956354520&lang=zh_CN#rd)		[🎈查看源码](https://github.com/frontslab/front-daily/tree/main/sourceCode/20211028)
 
