@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+.text{
+    display: inline-block;
+    font-size: 3.5em;
+    font-weight: 600;
+    padding: 0 4px;
+    color: white;
+    position: relative;
+}
+.text::before{
+    /* 获取文本 */
+    content: attr(data-text);
+    position: absolute;
+    /* 向左侧移2px */
+    left: -2px;
+    width: 100%;
+    /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
+    background: black;
+    /* 给before伪元素的文本添加左侧2px大小的红色文字阴影 */
+    text-shadow:2px 0 red;
+    /* 应用蒙版垂直变化动画，并一直循环 */
+    animation: animation-before 3s infinite linear alternate-reverse;
+}
+.text::after{
+    /* 获取文本 */
+    content: attr(data-text);
+    position: absolute;
+    /* 向左侧移2px */
+    left: 2px;
+    width: 100%;
+    /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
+    background: black;
+    /* 给before伪元素的文本添加右侧2px大小的蓝色文字阴影 */
+    text-shadow: -2px 0 blue;
+    /* 应用蒙版垂直变化动画，并一直循环 */
+    animation: animation-after 3s infinite linear alternate-reverse;
+}
+
+@keyframes animation-before{
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    5% {
+        clip-path: inset(.8em 0 .4em 0);
+    }
+
+    10% {
+        clip-path: inset(.4em 0 .8em 0);
+    }
+
+    15% {
+        clip-path: inset(.1em 0 1em 0);
+    }
+
+    20% {
+        clip-path: inset(.3em 0 .6em 0);
+    }
+
+    25% {
+        clip-path: inset(.6em 0 .3em 0);
+    }
+
+    30% {
+        clip-path: inset(.8em 0 .5em 0);
+    }
+
+    35% {
+        clip-path: inset(1em 0 .1em 0);
+    }
+
+    40% {
+        clip-path: inset(.7em 0 .35em 0);
+    }
+
+    45% {
+        clip-path: inset(.5em 0 .2em 0);
+    }
+
+    50% {
+        clip-path: inset(.2em 0 .5em 0);
+    }
+
+    55% {
+        clip-path: inset(.35em 0 .7em 0);
+    }
+
+    60% {
+        clip-path: inset(.1em 0 .9em 0);
+    }
+
+    65% {
+        clip-path: inset(.8em 0 .46em 0);
+    }
+
+    70% {
+        clip-path: inset(.66em 0 .33em 0);
+    }
+
+    75% {
+        clip-path: inset(.48em 0 .23em 0);
+    }
+
+    80% {
+        clip-path: inset(.23em 0 .48em 0);
+    }
+
+    85% {
+        clip-path: inset(.39em 0 .79em 0);
+    }
+
+    90% {
+        clip-path: inset(.33em 0 .66em 0);
+    }
+
+    95% {
+        clip-path: inset(1em 0 .3em 0);
+    }
+
+    100% {
+        clip-path: inset(.62em 0 .29em 0);
+    }
+}
+@keyframes animation-after{
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    5% {
+        clip-path: inset(.4em 0 .8em 0);
+    }
+
+    10% {
+        clip-path: inset(.8em 0 .4em 0);
+    }
+
+    15% {
+        clip-path: inset(1em 0 .1em 0);
+    }
+
+    20% {
+        clip-path: inset(.6em 0 .3em 0);
+    }
+
+    25% {
+        clip-path: inset(.3em 0 .6em 0);
+    }
+
+    30% {
+        clip-path: inset(.5em 0 .8em 0);
+    }
+
+    35% {
+        clip-path: inset(.1em 0 1em 0);
+    }
+
+    40% {
+        clip-path: inset(.35em 0 .7em 0);
+    }
+
+    45% {
+        clip-path: inset(.2em 0 .5em 0);
+    }
+
+    50% {
+        clip-path: inset(.5em 0 .2em 0);
+    }
+
+    55% {
+        clip-path: inset(.7em 0 .35em 0);
+    }
+
+    60% {
+        clip-path: inset(.9em 0 .1em 0);
+    }
+
+    65% {
+        clip-path: inset(.46em 0 .8em 0);
+    }
+
+    70% {
+        clip-path: inset(.3em 0 .66em 0);
+    }
+
+    75% {
+        clip-path: inset(.23em 0 .48em 0);
+    }
+
+    80% {
+        clip-path: inset(.48em 0 .23em 0);
+    }
+
+    85% {
+        clip-path: inset(.79em 0 .39em 0);
+    }
+
+    90% {
+        clip-path: inset(.66em 0 .33em 0);
+    }
+
+    95% {
+        clip-path: inset(.3em 0 1em 0);
+    }
+
+    100% {
+        clip-path: inset(.29em 0 .62em 0);
+    }
+}

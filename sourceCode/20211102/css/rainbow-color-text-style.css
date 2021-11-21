@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+body {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #222;
+}
+
+.rainbow {
+	letter-spacing: 0.2rem;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.rainbow span {
+	animation: rainbow 50s alternate infinite forwards;
+}
+
+@keyframes rainbow {
+	0% {
+		color: #efc68f;
+	}
+
+	5% {
+		color: #efe68f;
+	}
+
+	10% {
+		color: #99ef8f;
+	}
+
+	15% {
+		color: #968fef;
+	}
+
+	20% {
+		color: #8fbfef;
+	}
+
+	25% {
+		color: #b4ef8f;
+	}
+
+	30% {
+		color: #efdf8f;
+	}
+
+	35% {
+		color: #a78fef;
+	}
+
+	40% {
+		color: #8fefa3;
+	}
+
+	45% {
+		color: #8fef93;
+	}
+
+	50% {
+		color: #efac8f;
+	}
+
+	55% {
+		color: #e9ef8f;
+	}
+
+	60% {
+		color: #be8fef;
+	}
+
+	65% {
+		color: #8fefac;
+	}
+
+	70% {
+		color: #c2ef8f;
+	}
+
+	75% {
+		color: #efa18f;
+	}
+
+	80% {
+		color: #8fc1ef;
+	}
+
+	85% {
+		color: #8fefc6;
+	}
+
+	90% {
+		color: #8fef9b;
+	}
+
+	95% {
+		color: #efc68f;
+	}
+
+	100% {
+		color: #8fefed;
+	}
+}
+
+
+
+.text {
+	letter-spacing: 0.2rem;
+	font-size: 1.5rem;
+	background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-background-size: 200% 100%;
+	-webkit-animation: maskedAnimation 4s infinite linear;
+}
+
+@keyframes maskedAnimation {
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: -100% 0;
+	}
+}

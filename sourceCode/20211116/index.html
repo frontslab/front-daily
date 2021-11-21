@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>类型判断测试</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div>类型判断测试:请看控制台！</div>
+    <script>
+        console.log(typeof 3); // number 有效
+        console.log(typeof true); //boolean 有效
+        console.log(typeof Symbol()); // symbol 有效
+        console.log(typeof ''); // string 有效
+        console.log(typeof undefined); //undefined 有效
+        console.log(typeof null); //object 无效
+        console.log(typeof []); //object 无效
+        console.log(typeof new Function()); // function 有效
+        console.log(typeof new Date()); //object 无效
+        console.log(typeof new RegExp()); //object 无效
+
+        let arr = [];
+        console.log(arr instanceof Array); // true
+        console.log(arr instanceof Object); // true
+
+        console.log(/abc/ instanceof RegExp); // true
+        console.log(({}) instanceof Object); // true
+        console.log((function () { }) instanceof Function); // true
+
+        // 比如直接原型关系
+        function Fruit() { }
+        console.log((new Fruit) instanceof Fruit);    // true
+
+        // 原型链上的间接原型
+        function Apple() { }
+        Apple.prototype = new Fruit
+        console.log((new Apple) instanceof Fruit);      // true
+
+        console.log(3 instanceof Number); // false
+        console.log(true instanceof Boolean); // false
+        console.log('abc' instanceof String); // false
+        console.log(null instanceof String);  // always false
+        console.log(undefined instanceof String);  // always false
+
+        console.log(new Number(3) instanceof Number) // true
+        console.log(new Boolean(true) instanceof Boolean) // true
+        console.log(new String('abc') instanceof String) // true
+
+        function Fruit() { }
+        var a = new Fruit()
+        console.log(a)
+        console.log(a.constructor === Fruit)    // true
+
+        console.log(a = new Fruit());
+        console.log(a.constructor === Array);
+        console.log(a.constructor === Fruit);    // false
+
+        function Apple() { }
+        Apple.prototype = new Fruit
+
+        function BadApple() { }
+        BadApple.prototype = new Apple
+
+        console.log((new BadApple).constructor === Fruit);   // true
+        console.log(Fruit.constructor === Function);       // true
+
+        console.log((3).constructor === Number); // true
+        console.log(true.constructor === Boolean); // true
+        console.log('abc'.constructor === String); // true
+        // 相当于
+        console.log((new Number(3)).constructor === Number);
+        console.log((new Boolean(true)).constructor === Boolean);
+        console.log((new String('abc')).constructor === String);
+
+        // null.constructor         // TypeError!
+        // undefined.constructor    // TypeError!
+
+        var iframe = document.createElement('iframe');
+        document.body.appendChild(iframe);
+        var iWindow = iframe.contentWindow;
+        console.log(iWindow.Array === Array);         // false
+        // 相当于
+        console.log(iWindow.Array === window.Array);  // false
+
+
+
+        toString = Object.prototype.toString;
+
+        console.log(toString.call(new Date)); // [object Date]
+        console.log(toString.call(new String));// [object String]
+        console.log(toString.call(Math)); // [object Math]
+        console.log(toString.call(3)); // [object Number]
+        console.log(toString.call([])); // [object Array]
+        console.log(toString.call({})); // [object Object]
+
+        // Since JavaScript 1.8.5
+        console.log(toString.call(undefined)); // [object Undefined]
+        console.log(toString.call(null)); // [object Null]
+
+        console.log(toString.call(new Fruit)); // [object Object]
+
+        let jq_test = {
+            isWindow: function (obj) {
+                return obj && typeof obj === 'object' && "setInterval" in obj;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

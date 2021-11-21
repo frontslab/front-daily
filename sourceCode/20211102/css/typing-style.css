@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+body {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: black;
+}
+
+.typing {
+	color: white;
+	font-size: 2em;
+	width: 21em;
+	height: 1.5em;
+	border-right: 1px solid transparent;
+	animation: typing 2s steps(42, end), blink-caret .75s step-end infinite;
+	font-family: Consolas, Monaco;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+/* 打印效果 */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 21em;
+	}
+}
+
+/* 光标 */
+@keyframes blink-caret {
+
+	from,
+	to {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: currentColor;
+	}
+}
