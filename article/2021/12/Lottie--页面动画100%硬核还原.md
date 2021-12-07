@@ -22,7 +22,7 @@ index_img: https://frontlab.gitee.io/blog/cdn/202112/lottie_index.png
 
 ![](https://frontlab.gitee.io/blog/cdn/202112/e7a36206-7e94-44a9-a040-ef550497052a.png)
 
-## lottie简介
+## Lottie简介
 
 `Lottie` 是Airbnb开源的一个 **面向iOS、Android、React Native** 的动画库，能分析 AE 导出的动画（需要用bodymovin导出为json格式），并且能让原生 App 像使用静态素材一样使用这些动画，完美实现动画效果。
 
