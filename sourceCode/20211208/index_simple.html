@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>parallax.js入门</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        html,
+        body {
+            font-size: 56px;
+            height: 100vh;
+        }
+
+        #scene {
+            width: 800px;
+            height: 600px;
+            margin: 200px auto;
+        }
+        #scene > div:nth-child(1) {
+            height: 160px;
+            background-color: rgba(250, 128, 114, 0.3);
+        }
+        #scene > div:nth-child(2) {
+            height: 160px;
+            background-color: rgba(138, 43, 226, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="scene" data-relative-input="true">
+        <div class="layer" data-depth="0.2">My first Layer!</div>
+        <div class="layer" data-depth="0.6">My second Layer!</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    
+    <script>
+        setTimeout(function () {
+            var scene = document.getElementById('scene'); var parallax = new Parallax(scene);
+        }, 2000)
+
+    </script>
+
+</body>
+
+</html>
