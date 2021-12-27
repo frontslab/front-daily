@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>520</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background-color: pink;
+        }
+        .box{
+            width: 120px;
+            height: 120px;
+            background-color: red;
+            /* 使盒子旋转45度 scale是缩放变大 */
+            transform: rotate(45deg) scale(0.85);
+            /* 给盒子一些边距 :上下边距为200px，左右对半*/
+            margin: 200px auto;
+            margin-bottom: 80px;
+            /*  绑定动画 infinite是循环方式*/
+            animation: love 0.1ms infinite;
+            /* 给盒子一点阴影效果 */
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+
+        }
+        /* 现在开始做出“爱心”的形状 */
+        .box::before,.box::after{
+            content: "";
+            /* 给插入的两个盒子添加绝对定位 */
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background-color: red;
+            /* 让插入的两个盒子边框变成圆角 */
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+        }
+        .box::before{
+            /* 让这个盒子向左偏移68px */
+            left: -68px;
+        }
+        .box::after{
+            /* 让这个盒子向下偏移68px */
+            top: -68px;
+        }
+        /* 现在让爱心动起来 */
+        /* 要让爱心动起来其实很简单，只需要用 变形-缩放 */
+        @keyframes love{
+                0%{
+                   transform:rotate(45deg) scale(0.85);
+                   
+                   }
+               
+                100%{
+                   transform:rotate(45deg) scale(0.83);
+                   
+                   }
+               }
+        p{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 520px;
+            color:rgba(255, 0, 0, 0.5);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" style="animation-duration: 5ms"></div>
+    <!-- 添加一点文字 -->
+    <p>我的这里只有你！</p>
+</body>
+</html>
