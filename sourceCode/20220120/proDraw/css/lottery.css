@@ -1,0 +1,74 @@
+
+.winnerBox{
+    max-width:40rem;
+    padding:30px;
+    margin: 30px auto;
+    /*height: calc(100vh - 98px);*/
+    /*background-color: #fd6504 #9470fd;*/
+    background:linear-gradient(to bottom right, #fd6504 , #9470fd)
+}
+/* å¤§è½¬ç›˜æ ·å¼ */
+.turnplate_box {
+    width: 100%;
+    background:url("../images/zhuanp@2x.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.turnplate_box canvas {
+    margin: 7.5%;
+    width: calc(100% - 15%);
+    height: calc(100% - 15%);
+    /*position: absolute;*/
+    border-radius: 50%;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+#myCanvas {
+    background-color: white;
+    border-radius: 100%;
+    /*transition: transform 6s;*/
+    -o-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+}
+.turnplatw_btn {
+    width: 30%;
+    height: 35%;
+    left: 35%;
+    top: 30.5%;
+    border-radius: 100%;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    outline: none;
+    z-index: 40;
+}
+.turnplatw_img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.goIcon{
+    color: #fff;
+    font-weight: 800;
+    position:absolute;
+    margin-right: auto;
+    margin-left: auto;
+    background:url("../images/go.png")  no-repeat;
+    background-size: 100% 100%;
+    top:25%;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    left:25%;
+}
+

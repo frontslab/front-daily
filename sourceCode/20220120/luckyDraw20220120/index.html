@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>前端实验室年会抽奖</title>
+    <link rel="stylesheet" href="css/style-lottery.css">
+    <link rel="stylesheet" href="./css/animate.css">
+</head>
+<body>
+<!-- 顶部中国风花纹 start -->
+<header class="top-head"></header>
+
+<!--左侧中奖名单展示-->
+<aside class="aside-left">
+    <div class="aside-main" id="mingdan-con">
+        <div class="btn btn-red-outline" data-toggle="modal" id="mingdan-title">中奖名单</div>
+        <div class="award-main scrollbar" style="height:calc(100% - 90px)">
+            <div id="award-123">
+                <div class="award-con" id="award-01">
+                    <h3 class="award-title">一等奖</h3>
+                    <ul class="win"></ul>
+                </div>
+                <div class="award-con" id="award-02">
+                    <h3 class="award-title">二等奖</h3>
+                    <ul class="win"></ul>
+                </div>
+                <div class="award-con" id="award-03">
+                    <h3 class="award-title">三等奖</h3>
+                    <ul class="win"></ul>
+                </div>
+            </div>
+            <div class="award-con" id="award-04">
+                <!--<h3 class="award-title">纪念奖</h3>-->
+                <ul class="win"></ul>
+            </div>
+            <a href="javascript:;" id="award04-toggle" class="more">查看更多</a>
+        </div>
+    </div>
+    <img src="./img/lantern.png" alt="" width="85" id="mingdan" class="switch">
+</aside>
+<!--右侧奖品名单展示-->
+<aside class="aside-right">
+    <div class="aside-main" id="liwu-con" style="height:calc(100% - 40px)">
+        <div class="btn btn-red-outline" data-toggle="modal" id="liwu-title">新年礼物</div>
+        <div id="roll" class="award-main" style="height:calc(100% - 100px)">
+        	<div class="" id="roll-div">
+        		<div class="award-con">
+	                <h3 class="award-title">特等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">IPhoneX-256G</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">一等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">Tiffany 18K笑脸项链</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">二等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">LOVO罗莱生活春秋被</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">美的手持无线吸尘器</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">三等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/jingdong.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">哈根达斯尊礼卡</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/yashua.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">阿尔郎电动平衡车</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">美的蒸汽挂烫机</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">铁三角复刻版耳机</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">第八代kindle</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">枕头</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">四等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/chongdian.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">卡拉羊（Carany）拉杆箱</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/nuanshou.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">美的家用多功能电烤箱</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/bao.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">华为运动手环</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">五等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/chongdian.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">宝石5200ma移动电源</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/nuanshou.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">乐泡薄荷10000ma移动电源</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/bao.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">乐上LEXON男卡多功能包</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">特等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">IPhoneX-256G</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">一等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">Tiffany 18K笑脸项链</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">二等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">LOVO罗莱生活春秋被</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/canon.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">美的手持无线吸尘器</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">三等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/jingdong.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">哈根达斯尊礼卡</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/yashua.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">阿尔郎电动平衡车</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">美的蒸汽挂烫机</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">铁三角复刻版耳机</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">第八代kindle</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/anmo.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">枕头</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">四等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/chongdian.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">卡拉羊（Carany）拉杆箱</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/nuanshou.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">美的家用多功能电烤箱</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/bao.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">华为运动手环</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            <div class="award-con">
+	                <h3 class="award-title">五等奖</h3>
+	                <ul class="win">
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/chongdian.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">宝石5200ma移动电源</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/nuanshou.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">乐泡薄荷10000ma移动电源</div>
+	                    </li>
+	                    <li class="clearfix win-li">
+	                        <div class="f-l avatar">
+	                            <!--<img width="34" src="./img/gift/bao.jpg"/>-->
+	                        </div>
+	                        <div class="f-l name">乐上LEXON男卡多功能包</div>
+	                    </li>
+	                </ul>
+	            </div>
+	            
+        </div>
+        </div>
+        
+    </div>
+    <img src="./img/lantern.png" alt="" width="85" id="liwu" class="switch">
+</aside>
+
+<!--倒计时展示-->
+<div class="stop-main" style="line-height: calc(100%);">
+    <div id="stop-time">叁</div>
+    <div class="back"></div>
+</div>
+
+<button class="close" id="modal-close" data-dismiss="modal">
+    <span aria-hidden="true" class="btn_x">&times;</span>
+</button>
+
+<div class="modal fade" id="lottery-result" role="dialog" aria-hidden="true">
+	<canvas id="canvas"></canvas>
+    <div class="modal-dialog">
+        <div class="modal-content" style="height: calc(100% - 110px);padding-top: 50px;" >
+            <canvas id="lottery-canvas"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="main" style="height: calc(100% - 50px);">
+    <div class="lotterty-infogo">
+        前端实验室年会抽奖
+    </div>
+    <div id="lottery-main" class="lottery-main" style="height: calc(100% - 60px);">
+        <div class="wrap-border-main" style="height: calc(100% - 50px);">
+            <img src="./img/wrap-border-1.png" class="wrap-border wrap-border-1">
+            <img src="./img/wrap-border-2.png" class="wrap-border wrap-border-2">
+            <img src="./img/wrap-border-3.png" class="wrap-border wrap-border-3">
+            <img src="./img/wrap-border-4.png" class="wrap-border wrap-border-4">
+            <div class="wrap-border wrap-border-left"></div>
+            <div class="wrap-border wrap-border-right"></div>
+        </div>
+        <div class="wrap-main" style="height: calc(100% - 140px);">
+            <div class="lottery-wrap" id="lottery-wrap"></div>
+        </div>
+
+        <!--抽奖按钮-->
+        <div class="dashboard">
+            <div class="cirle-btn award" id="award-1" data-award="1">一</div>
+            <div class="cirle-btn award" id="award-2" data-award="2">二</div>
+            <div class="btn btn-red-outline lottery-btn" id="lottery-btn" data-award="">点击开始</div>
+            <div class="cirle-btn award" id="award-3" data-award="3">三</div>
+            <div class="cirle-btn award" id="award-4" data-award="4">纪</div>
+        </div>
+    </div>
+</div>
+
+<canvas class="snow-canvas" speed="2" interaction="true" size="10" count="30" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false" width="1366" height="667"></canvas>
+<canvas class="snow-canvas" speed="3" interaction="true" size="12" count="80" wind-power="-5" image="./img/snow.png" width="1366" height="667"></canvas>
+
+<footer class="footer"></footer>
+
+<!-- 新年祝福框模板 start -->
+<script type="text/template" id="lotterycon-tpl">
+    <% _.each(lottery_datas, function (item) { %>
+    <div class="clearfix lottery-list" data-id="" data-namezh="<%= item.namezh %>" data-nameen="<%= item.nameen %>">
+        <!--<div class="turqoise lottery-avatar">
+        	<%= item.namezh %>
+            <img src="./img/avatar/<%= item.nameen %>.jpg" alt="<%= item.namezh %>">
+        </div>-->
+        <div class="f-l lottery-content">
+            <em class="beauty border-01"></em>
+            <em class="beauty border-02"></em>
+            <em class="beauty border-03"></em>
+            <em class="beauty border-04"></em>
+            <div class="border bor-top"></div>
+            <div class="border bor-bottom"></div>
+            <!--<h3 class="content-title"> 
+            	<span class="lottery-name"><%= item.namezh %></span>
+            	 &nbsp;&nbsp;<span class="company">[ 寒山科技 ]</span>
+            </h3>-->
+            <div class="content-detail">
+                <b>抽奖号码：</b>
+                <span><%= item.namezh.substring(0,1)+" "+item.namezh.substring(1,2)+" "+item.namezh.substring(2,3)+" "+item.namezh.substring(3,4) %></span>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+</script>
+<!-- 新年祝福框模板 end -->
+
+<!-- 中奖者数据展示模板 start -->
+<script type="text/template" id="awardcon-tpl">
+    <li class="clearfix win-li">
+        <div class="avatar">
+        	<!--<%= item.nameen %>-->
+        	<!--{namezh}-->
+            <!--<img width="34" src="./img/avatar/{nameen}.jpg"/>-->
+        </div>
+        <div class="name">{namezh}</div>
+        <a class="f-l delete" href="javascript:;">&times;</a>
+    </li>
+</script>
+<!-- 中奖者数据展示模板 end -->
+
+<!--音乐开关-->
+<a id="music-control" class="animated infinite bounce" href="javascript:;" data-open="1"></a>
+<!--清除数据开关-->
+<a id="clear-control" href="javascript:;" data-open="1"></a>
+
+<audio id="music" loop preload="auto" src="img/shiji.mp3">
+    你的浏览器不支持audio标签
+</audio>
+
+<script type="text/javascript" src="./js/underscore.js"></script>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="./lottery_data.js"></script>
+<script src="js/boot-modal.js"></script>
+<script src="js/snow-plugin.js"></script>
+<!--手机js-->
+<!--<script type="text/javascript" src="ph_draw.js" ></script>-->
+<!--电脑js-->
+<script type="text/javascript" src="pc_draw.js" ></script>
+</body>
+</html>
